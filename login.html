@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <style>
+        *{
+            box-sizing: border-box;
+
+        }
+        body{
+            width: 100%;
+            height: 100%;
+            background-color: rgb(215, 243, 250);
+            
+        }
+        form{
+            width: 300px;
+            margin: 200px auto;
+            text-align: center;
+        }
+        input{
+            display: block;
+            margin: 10px auto;
+            width: 250px;
+            height: 30px;
+            
+        }
+         .decor-corner {
+    position: fixed;     
+    top: 0;
+    left: 0;
+    width: 320px;         
+    height: auto;
+    pointer-events: none;  
+    z-index: 0;            
+    opacity: 0.98;
+  }
+
+  .decor-baixo{
+     position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    height: auto;
+    pointer-events: none;
+    z-index: 0;
+  }
+          @media (max-width: 600px) {
+    .decor-corner { width: 160px; }
+    .login-container { margin: 20px; width: calc(100% - 40px); }
+    input[type="text"], input[type="password"], button { max-width: 100%; }
+          }
+    </style>
+</head>
+<body>
+     <img class="decor-corner" src="C:\Users\SENAI\Desktop\novo projeto\image-Photoroom (10).png" alt="Detalhe floral">
+      <img class="decor-baixo" src="C:\Users\SENAI\Desktop\novo projeto\image-Photoroom (11).png" alt="Detalhe floral">
+    <form>
+    <form>
+        <h3>LOGIN</h3>
+        <input type="text" placeholder="LOGIN" id="login">
+        <input type="passoword" placeholder="Senha" id="senha">
+        <input type="submit" onclick="logar();return false">
+    </form>
+    <script>
+        function logar (){
+            var login=document.getElementById("login").value;
+            var senha=document.getElementById("senha").value;
+            if(login =="admin" && senha =="admin"){
+                alert('sucesso');
+                location.href="index.html";
+            }else{
+                alert("Usuário ou senha Incorreto");
+            }
+            }
+        
+    </script>
+</body>
+</html>
